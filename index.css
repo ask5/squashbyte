@@ -1,0 +1,231 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+* {
+  touch-action: manipulation;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+main {
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: beige;
+  color: #222;
+}
+
+.canvas {
+  width: 100%;
+}
+
+.start-section {
+  margin-top: 8px;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(6, 1fr);
+}
+.start-section-item {
+  font-size: 22px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+#start {
+  background-color: darkred;
+  color: white;
+  width: 100%;
+  grid-column: span 4;
+}
+
+#showlog,
+#about {
+  background-color: cadetblue;
+  color: #222;
+}
+
+.score-card {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  text-transform: lowercase;
+  background-color: #222;
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.score-card-item {
+  display: flex;
+  gap: 1px;
+  align-items: center;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.input-button {
+  gap: 4px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.key-pad {
+  width: 100%;
+  margin: auto;
+  margin-top: 8px;
+}
+
+.key-pad-button {
+  height: 45px;
+  line-height: 45px;
+  border-radius: 4px;
+  background-color: #222;
+  color: white;
+  font-size: 32px;
+}
+
+.key-pad-button.hex {
+  background-color: lightseagreen;
+  color: #222;
+}
+
+#info {
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 22px;
+  line-height: 28px;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid #222;
+}
+
+.key-pad-button.submit {
+  background-color: darkgreen;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  border: none;
+  box-shadow: none;
+}
+
+.clicked {
+  background-color: #666;
+}
+
+.log-header,
+.help-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px double #222;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+}
+
+#back,
+#closeabout {
+  background-color: darkred;
+  color: white;
+  height: 25px;
+  line-height: 25px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+#logpanel {
+  min-height: 500px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+#aboutpanel {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+tr,
+th,
+td {
+  border: 1px solid #222;
+  padding: 4px;
+}
+
+.left-align {
+  text-align: left;
+}
+.right-align {
+  text-align: right;
+}
+
+.high-score-row {
+  color: firebrick;
+}
+
+.best {
+  color: gold;
+}
+
+.binarytable {
+  border: 0;
+  background-color: lightgrey;
+}
+
+.binarytable tr,
+.binarytable th,
+.binarytable td {
+  border: 0;
+}
+
+.ball {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: #222;
+  border: 1px solid white;
+  color: white;
+  margin: auto;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.ball.one {
+  background-color: white;
+  border: 1px solid #222;
+  color: #222;
+}
+
+.binarytable td {
+  width: 50px;
+  text-align: center;
+}
+
+.binarytable td.highlight {
+  background-color: silver;
+}

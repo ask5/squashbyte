@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NDTZ6886XS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-NDTZ6886XS");
+    </script>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Squash Byte</title>
+  </head>
+  <body>
+    <div class="container">
+      <main id="main">
+        <div id="game-canvas">
+          <canvas id="canvas" class="canvas"></canvas>
+          <div class="score-card">
+            <div class="score-card-item">
+              <div>Squashes:</div>
+              <div id="squashed_div"></div>
+            </div>
+            <div class="score-card-item">
+              <div>Fouls:</div>
+              <div id="fault_div"></div>
+            </div>
+            <div class="score-card-item">
+              <div>Score:</div>
+              <div id="score"></div>
+            </div>
+          </div>
+          <div id="start-section-wrapper" class="start-section-wrapper">
+            <div id="start-section" class="start-section">
+              <button id="about" class="start-section-item">&#63;</button>
+              <button id="showlog" class="start-section-item">&#9783;</button>
+              <button id="start" class="start-section-item">
+                Play &#10148;
+              </button>
+            </div>
+          </div>
+          <div id="info"></div>
+          <div id="keypad" class="key-pad">
+            <div class="input-button">
+              <button class="key-pad-button" value="7" accesskey="7">7</button>
+              <button class="key-pad-button" value="8" accesskey="8">8</button>
+              <button class="key-pad-button" value="9" accesskey="9">9</button>
+              <button class="key-pad-button" value="4" accesskey="4">4</button>
+              <button class="key-pad-button" value="5" accesskey="5">5</button>
+              <button class="key-pad-button" value="6" accesskey="6">6</button>
+              <button class="key-pad-button" value="1" accesskey="1">1</button>
+              <button class="key-pad-button" value="2" accesskey="2">2</button>
+              <button class="key-pad-button" value="3" accesskey="3">3</button>
+              <button class="key-pad-button clear" value="clear" accesskey="c">
+                &larr;
+              </button>
+              <button class="key-pad-button" value="0" accesskey="0">0</button>
+              <button class="key-pad-button submit" value="submit">
+                &#9166;
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="logpanel" style="display: none">
+          <div class="log-header">
+            <strong>Stats</strong>
+            <div id="high"></div>
+            <button id="back">Back</button>
+          </div>
+          <div id="display_log"></div>
+        </div>
+        <div id="aboutpanel" style="display: none">
+          <div class="help-header">
+            <h2>Squash Byte</h2>
+            <button id="closeabout">Close</button>
+          </div>
+          <p>
+            Squash Byte is a fun game that involves squashing 8 bit binary
+            numbers AKA bytes using decimals.
+          </p>
+          <p>
+            The game starts with a 8 x &infin; grid of balls moving continuously
+            from top to bottom on a canvas. Every row in the grid represents a
+            random byte with value between 1 through 255. Each ball is a bit
+            having value of 0 or 1 and is black or white in color respectively.
+          </p>
+          <p>
+            The game ends if the grid touches the bottom of the canvas. Your
+            goal is to keep it from touching the bottom by deleting rows or in
+            other words <em>squashing bytes</em>. The grid shifts upward as you
+            squash bytes.
+          </p>
+          <p>
+            To squash a byte you need to enter the equivalent decimal number
+            using the keypad on the screen or your computer keyboard. For each
+            squashed byte you get points equal to it's decimal value. Bigger the
+            value of byte, bigger is the reward!
+          </p>
+          <p>Wrong entry is counted as foul and will cost you 5 points.</p>
+          <p>
+            Lastly, the speed of the grid increases with your score so keep up
+            the eye-brain-finger coordination to stay in the game!
+          </p>
+          <p>
+            If you don't know how to convert binary into decimal, here is a
+            quick example. Say you want to convert 00011001 into a decimal
+            value.
+          </p>
+          <table class="binarytable">
+            <tr>
+              <td><div class="ball">0</div></td>
+              <td><div class="ball">0</div></td>
+              <td><div class="ball">0</div></td>
+              <td><div class="ball one">1</div></td>
+              <td><div class="ball one">1</div></td>
+              <td><div class="ball">0</div></td>
+              <td><div class="ball">0</div></td>
+              <td><div class="ball one">1</div></td>
+            </tr>
+            <tr>
+              <td>128</td>
+              <td>64</td>
+              <td>32</td>
+              <td>16</td>
+              <td>8</td>
+              <td>4</td>
+              <td>2</td>
+              <td>1</td>
+            </tr>
+          </table>
+          <p>
+            Notice that the numbers in the bottom row double as you go from
+            right to left. Start from right and take all values from the bottom
+            row where there is a 1 above and add them together. So the decimal
+            value of 00011001 is 1 + 8 + 16 = 25. After some practice you will
+            memorize the positions of these numbers and can discover better ways
+            to do the math quicker.
+          </p>
+          <p>
+            Thats all you need to know to play Squash Byte. Now put your math
+            hat on and get ready to squash some bytes. Enjoy!
+          </p>
+        </div>
+      </main>
+    </div>
+    <script src="./dist/main.js"></script>
+  </body>
+</html>
