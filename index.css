@@ -33,7 +33,7 @@ main {
   margin-top: 8px;
   display: grid;
   gap: 4px;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(8, 1fr);
 }
 .start-section-item {
   font-size: 22px;
@@ -45,12 +45,13 @@ main {
   background-color: darkred;
   color: white;
   width: 100%;
-  grid-column: span 4;
+  grid-column: span 5;
 }
 
+#settings,
 #showlog,
 #about {
-  background-color: cadetblue;
+  background-color: transparent;
   color: #222;
 }
 
@@ -143,7 +144,8 @@ button {
 }
 
 #back,
-#closeabout {
+#closeabout,
+#closesettings {
   background-color: darkred;
   color: white;
   height: 25px;
@@ -228,4 +230,28 @@ td {
 
 .binarytable td.highlight {
   background-color: silver;
+}
+
+.toggleButton {
+  width: 84px;
+  min-width: 84px;
+  display: block;
+  border: 1px black solid;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.toggleSwitchCircle {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px black solid;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.settingsbody {
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }

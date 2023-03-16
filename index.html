@@ -2,6 +2,12 @@
 <html lang="en">
   <head>
     <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-NDTZ6886XS"
     ></script>
@@ -43,6 +49,7 @@
           </div>
           <div id="start-section-wrapper" class="start-section-wrapper">
             <div id="start-section" class="start-section">
+              <button id="settings" class="start-section-item">&#9881;</button>
               <button id="about" class="start-section-item">&#63;</button>
               <button id="showlog" class="start-section-item">&#9783;</button>
               <button id="start" class="start-section-item">
@@ -92,7 +99,7 @@
           <p>
             The game starts with a 8 x &infin; grid of balls moving continuously
             from top to bottom on a canvas. Every row in the grid represents a
-            random byte with value between 1 through 255. Each ball has a value 
+            random byte with value between 1 through 255. Each ball has a value
             of 0 or 1 and is black or white in color respectively.
           </p>
           <p>
@@ -109,8 +116,8 @@
           </p>
           <p>Wrong entry is counted as foul and will cost you 5 points.</p>
           <p>
-            The speed of the grid increases with your score so keep up
-            the eye-brain-finger coordination to stay in the game!
+            The speed of the grid increases with your score so keep up the
+            eye-brain-finger coordination to stay in the game!
           </p>
           <p>
             If you don't know how to convert binary into decimal, here is a
@@ -152,8 +159,20 @@
             hat on and get ready to squash some bytes. Enjoy!
           </p>
         </div>
+        <div id="settingspanel" style="display: none">
+          <div class="help-header">
+            <h2>Settings</h2>
+            <button id="closesettings">Close</button>
+          </div>
+          <div class="settingsbody">
+            <div>Sound Effects</div>
+            <div id="soundtoggle" class="toggleButton">
+              <div id="toggleSwitchCircle" class="toggleSwitchCircle"></div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
-    <script src="./main.js"></script>
+    <script src="./dist/main.js"></script>
   </body>
 </html>
