@@ -233,25 +233,43 @@ td {
 }
 
 .toggleButton {
-  width: 84px;
-  min-width: 84px;
+  width: 54px;
+  min-width: 54px;
   display: block;
   border: 1px black solid;
   border-radius: 30px;
   transition: 0.5s;
+  background-color: gray;
 }
 .toggleSwitchCircle {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   border: 1px black solid;
   background-color: white;
   border-radius: 50%;
   transition: 0.5s;
+  transform: translateX(0%);
 }
 
-.settingsbody {
+.toggleButton.on {
+  background-color: green;
+}
+
+.toggleButton.on > .toggleSwitchCircle {
+  transform: translateX(100%);
+}
+
+.setting {
   display: flex;
   gap: 5px;
   align-items: center;
+  justify-content: space-between;
+  height: 24px;
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+
+.settinglabel {
+  font-weight: 600;
 }
