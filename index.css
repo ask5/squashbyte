@@ -125,6 +125,10 @@ main {
   background-color: darkgreen;
 }
 
+.key-pad-button.clear {
+  background-color: darkred;
+}
+
 .hidden {
   display: none;
 }
