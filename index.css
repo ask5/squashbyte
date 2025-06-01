@@ -152,6 +152,14 @@ button {
   padding-bottom: 4px;
 }
 
+.sort-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 4px;
+}
+
 #back,
 #closeabout,
 #closesettings {
